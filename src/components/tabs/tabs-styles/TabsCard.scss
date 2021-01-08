@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+$serif-font: 'Source Serif Pro', serif;
+$mobile-breakpoint: 400px;
+
+.tabs-card {
+	display: inline-block;
+	padding: 20px 40px;
+}
+
+.tabs-image {
+	width: 100px;
+	padding: 10px 0;
+
+	img {
+		width: 100%;
+	}
+}
+
+.tabs-card-content {
+	font-family: $serif-font;
+
+	.title {
+		text-align: left;
+		font-size: 24px;
+	}
+
+	.content {
+		font-size: 14px;
+		text-align: justify;
+	}
+
+	.link {
+		font-size: 16px;
+		text-decoration: none;
+		color: #6C63FF;
+	}
+}
+
+@media (min-width: $mobile-breakpoint) {
+	.tabs-card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+		padding: 20px;
+	}
+
+	.tabs-image {
+		width: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.tabs-card-content {
+		font-family: $serif-font;
+
+		.title {
+			text-align: left;
+			font-size: 36px;
+		}
+
+		.content {
+			font-size: 16px;
+			text-align: justify;
+		}
+
+		.link {
+			font-size: 16px;
+			text-decoration: none;
+			color: #6C63FF;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+$serif-font: 'Source Serif Pro', serif;
+
+.container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+div[role=button] {
+    outline: 0;
+}
+
+.title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 24px;
+  font-family: $serif-font
+}
+
+.title-description {
+  display: none;
+}
+
+.title-line {
+  width: 100px;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 36px;
+    font-family: $serif-font
+  }
+
+  .title-description {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-family: $serif-font;
+    font-size: 16px;
+  }
+
+  .title-line {
+    width: 100px;
+  }
+}

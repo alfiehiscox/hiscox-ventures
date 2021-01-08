@@ -22,8 +22,8 @@ export default class Nav extends React.Component {
     window.addEventListener("resize", () => this.setState({ viewportWidth: window.innerWidth }));
   }
 
-  setSectorOpen = (value) => {
-    this.setState({sectorOpen: value});
+  setSectorOpen = () => {
+    this.setState({sectorOpen: !this.state.sectorOpen});
   }
 
   setOpen = () => {
@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
         <Logo />
         <Collapsible mobile={this.state.viewportWidth < 900} setOpen={this.setOpen} open={this.state.open}>
           <ul className="nav">
-            <div className="exit" onClick={this.setOpen}>X</div>
+            <div role="button" tabIndex={0} className="exit" onClick={this.setOpen} onKeyDown={this.handleClick}>X</div>
             <NavItem title="About" link='about' />
             <NavItem title="Expertise" link='expertise' />
             <NavItem title="People" link='people' />
@@ -44,9 +44,12 @@ export default class Nav extends React.Component {
               title="Sectors" 
               setSectorOpen={this.setSectorOpen} 
               sectorOpen={this.state.sectorOpen} 
-              mobile={this.state.viewportWidth < 900}
-            >
-              <Dropdown text="Something Random" mobile={this.state.viewportWidth < 900} setSectorOpen={this.setSectorOpen}/>
+              mobile={this.state.viewportWidth < 900} >
+              <Dropdown 
+                text="Something Random" 
+                mobile={this.state.viewportWidth < 900} 
+                setSectorFunction={this.setSectorOpen} 
+                sectorOpen={this.state.sectorOpen} />
             </NavItem>
           </ul>
         </Collapsible>
@@ -62,9 +65,9 @@ const Logo = () => {
 }
 
 const NavItem = (props) => {
-  const handleMouse = (value) => {
+  const handleMouse = () => {
     if (props.setSectorOpen) {
-      props.setSectorOpen(value);
+      props.setSectorOpen();
     }
   }
 
@@ -78,23 +81,29 @@ const NavItem = (props) => {
       </Link>
     );
   } else if ( props.mobile ) {
-    console.log("from mobile")
     return (
-      <div className='nav-item' onClick={() => handleMouse(true)} >
-        <li>{props.title}</li>
-        { props.sectorOpen && props.children }
+      <div 
+        style={{outline: '0'}}
+        role="button"
+        tabIndex={-1} 
+        className='nav-item' 
+        onClick={() => handleMouse()} 
+        onKeyDown={() => handleMouse()} >
+          <li>{props.title}</li>
+          { props.children }
       </div>
     );
   }
   return (
-    <div
+    <button
+      style={{backgroundColor: 'white'}}
       className="nav-item" 
-      onMouseEnter={ () => handleMouse(true) } 
-      onMouseLeave={ () => handleMouse(false) } 
+      onMouseEnter={ () => handleMouse() } 
+      onMouseLeave={ () => handleMouse() } 
     >
       <li>{props.title}</li>
       { props.sectorOpen && props.children }
-    </div>
+    </button>
   )
 }
 
@@ -107,14 +116,24 @@ const Dropdown = (props) => {
     );
   };
 
+  const handleClick = () => {
+    props.setSectorFunction();
+  }
+
   return (
-      <ul className="nav" style={{transform: 'translateX(0%)'}}>
-        <div className="exit" onClick={() => props.setSectorOpen(false)}>Back</div>
-        <NavItem title="Housing" />
-        <NavItem title="Automobiles" />
-        <NavItem title="Software" />
-        <NavItem title="Cinematography" />
+    <CSSTransition 
+      in={props.sectorOpen}
+      timeout={ 300 }
+      classNames="sector-styles"
+    >
+      <ul className="nav">
+        <button className="exit" style={{cursor: 'pointer'}} onClick={ () => handleClick() }>X</button>
+        <NavItem title="Housing" link="sectors"/>
+        <NavItem title="Automobiles" link="sectors"/>
+        <NavItem title="Software" link="sectors"/>
+        <NavItem title="Cinematography" link="sectors"/>
       </ul>
+    </CSSTransition>
   )
 }
 
@@ -127,13 +146,18 @@ class Collapsible extends React.Component {
     if (this.props.mobile) {
       return (
         <div>
-          <div className="burger-containter" style={{cursor: 'pointer'}} onClick={ this.handleClick }>
+          <button 
+            className="burger-containter" 
+            style={{cursor: 'pointer'}} 
+            onClick={ this.handleClick }
+            onKeyDown={ this.handleClick }
+          >
             <div className="burger">
               <div className="line-1"></div>
               <div className="line-2"></div>
               <div className="line-3"></div>
             </div>
-          </div>
+          </button>
           <CSSTransition 
             in={this.props.open}
             timeout={ 400 }

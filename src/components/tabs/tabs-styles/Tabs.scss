@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+$serif-font: 'Source Serif Pro', serif;
+
+.tab-list {
+	border-box: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tab-list-item {
+  width: 100%;
+  padding: 10px;
+  font-family: $serif-font;
+  font-size: 14px;
+  text-align: center;
+  background-color: #E1E1E1;
+}
+
+.tab-list-active {
+  background-color: white;
+}
+
+@media (min-width: 1140px ) {
+	//ToDo
+}
+
+
+@media (min-width: 400px) {
+	.tabs {
+		padding: 10px 50px;
+	}
+
+	.tab-list {
+		border-box: 1px solid #ccc;
+		padding: 15px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.tab-list-item {
+	  list-style: none;
+	  font-family: $serif-font;
+	  font-size: 18px;
+	  background-color: white;
+	}
+
+	.tab-list-active {
+	  background-color: white;
+	  text-decoration: underline;
+	}
+}

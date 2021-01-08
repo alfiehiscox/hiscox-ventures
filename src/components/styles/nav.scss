@@ -12,13 +12,27 @@ a {
 	text-decoration: none;
 }
 
+button {
+	color: inherit;
+	font: inherit;
+	border: none;
+	outline: none;
+}
+
+button:focus {
+	outline: 0;
+}
+
 .nav-bar {
+	position: absolute;
+	top: 0;
 	width: 100%;
-	height: 130px;
+	height: 80px;
 	background-color: white;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 100;
 }
 
 .nav {
@@ -57,10 +71,11 @@ a {
 
 .dropdown {
 	position: absolute;
-	top: 100px;
+	top: 80px;
 	height: 200px;
 	width: 200px;
-	background-color: lightgrey;
+	background-color: white;
+	drop-shadow: 10px 10px 20px lightgrey;
 	padding: 20px;
 }
 
@@ -142,6 +157,7 @@ a {
 		right: 30px;
 		color: grey;
 		font-family: "Audiowide";
+		background-color: inherit;
 	}
 
 	.exit:hover {
@@ -163,6 +179,25 @@ a {
 		transform: translateX(0%);
 	}
 	.collapsible-exit-active {
+		transform: translateX(110%);
+		transition: all 300ms ease-in-out;
+	}
+
+	// For sector transition within navbar
+	.sector-styles-enter {
+		transform: translateX(110%);
+	}
+	.sector-styles-enter-active {
+		transform: translateX(0%);
+		transition: all 300ms ease-in-out;
+	}
+	.sector-styles-enter-done {
+		transform: translateX(0%);
+	}
+	.sector-styles-exit {
+		transform: translateX(0%);
+	}
+	.sector-styles-exit-active {
 		transform: translateX(110%);
 		transition: all 300ms ease-in-out;
 	}

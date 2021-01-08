@@ -107,8 +107,8 @@ button:focus {
 		padding: 50px;
 		width: 175px;
 		height: 100vh;
-		background-color: lightgrey;
-		position: absolute;
+		background-color: white;
+		position: fixed;
 		top: 0px;
 		right: 0px;
 		margin: 0px;
@@ -132,7 +132,7 @@ button:focus {
 		cursor: pointer;
 		height: 40px;
 		width: 40px;
-		background-color: lightgrey;
+		background-color: white;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;

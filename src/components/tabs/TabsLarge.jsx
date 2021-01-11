@@ -15,6 +15,7 @@ class TabsLarge extends React.Component {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                        Donec fringilla, nunc nec ultrices posuere, diam lacus
                        ornare enim, sed aliquet ex purus in sapien. Fusce at lacus mi."
+          color="black"
         />
         <Tabs>
           {TabsData.map((data) => {
@@ -37,7 +38,7 @@ class TabsLarge extends React.Component {
 
 function Title(props) {
   return (
-    <div>
+    <div style={{color: props.color}}>
       <div className="title">{props.title}</div>
       <hr className="title-line" />
       <div className="title-description">{props.description}</div>
@@ -45,4 +46,4 @@ function Title(props) {
   );
 }
 
-export default TabsLarge;
+export { TabsLarge, Title };

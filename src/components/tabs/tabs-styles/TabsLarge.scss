@@ -16,11 +16,13 @@ div[role=button] {
   text-align: center;
   padding: 5px 0;
   font-size: 24px;
-  font-family: $serif-font
+  font-family: $serif-font;
+  font-weight: lighter;
 }
 
 .title-description {
-  display: none;
+  display: none;  
+  font-weight: lighter;
 }
 
 .title-line {
@@ -39,7 +41,7 @@ div[role=button] {
     text-align: center;
     padding: 5px 0;
     font-size: 36px;
-    font-family: $serif-font
+    font-family: $serif-font;
   }
 
   .title-description {

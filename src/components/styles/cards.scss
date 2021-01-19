@@ -195,3 +195,88 @@
 	}
 }
 
+
+// People Card Default 
+.default {
+	.people-card-content {
+		$padding: 75px;
+		width: calc(100% - 2*$padding);
+		padding: $padding; 
+
+		h4 {
+			font-size: 20px;
+		}
+	}
+}
+
+.people-card {
+	width: 75%;
+	height:	475px;
+	margin: 80px auto;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 0px 100px 0px #3d3d3d; 
+	position: relative;
+
+	.main-image {
+		position: absolute;
+		top: -75px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		box-shadow: 0px 0px 100px 0px black; 
+	}
+}
+
+
+// People Card Details
+
+.people-tabs {
+	margin-top: 40px; 
+	$padding: 90px 0px;
+	width: calc(100% - 2*$padding);
+	padding: $padding; 
+}
+
+.people-tab-list {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.profile-card {
+	padding: 30px 100px;
+}
+
+.people-company-images {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: 10px 10px;
+	box-shadow: 10px 10px 20px #b5b5b5;
+}
+
+.people-card-tabs-button {
+	background-color: white;
+}
+
+.people-tab-active {
+	text-decoration: underline;
+}
+
+.people-tab-list-images {
+	transform: translateX(-20px);
+}
+
+.people-tabs-images {
+	margin: 5px;
+}
+
+.current-roles-card {
+	padding: 20px 6rem;
+}
+
+

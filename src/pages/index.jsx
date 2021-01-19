@@ -6,6 +6,7 @@ import IndexValues from '../components/index-values';
 import SingleProfile from '../components/single-profile';
 import Teamwork from '../images/values-img/teamwork.svg';
 import IndexAchievements from '../components/index-achievements';
+import Building from '../images/building.png';
 
 // markup
 const IndexPage = () => {
@@ -26,6 +27,8 @@ const IndexPage = () => {
         title="Hiscox Ventures"
         ltd="true"
         tagline="A something consultancy and friendly company"
+        image={Building}
+        gradient={true}
       />
       <TabsLarge />
       <IndexValues 

@@ -74,7 +74,7 @@ const NavItem = (props) => {
   if ( props.link ) { 
     return (
       <Link 
-        to={props.link}
+        to={'/' + props.link + '/'}
         className="nav-item" 
       >
         <li>{props.title}</li>

@@ -1,4 +1,4 @@
-import React, { useState }from 'react';
+import React, { useState, useEffect }from 'react';
 import { Layout } from '../components/layout';
 import '../components/styles/people-page.scss';
 import { Title } from '../components/tabs/TabsLarge';
@@ -8,6 +8,10 @@ import peopleData from '../data/people-data';
 
 const PeoplePage = () => {
   const [currentPerson, setCurrentPerson] = useState("default");
+
+  useEffect(() => {
+    document.querySelector('body').scroll({top: 0, behavior: 'smooth'});
+  }, [currentPerson]);
 
   let person;
   if (currentPerson === "default") {
@@ -65,27 +69,12 @@ const PeoplePage = () => {
 
 const ProfileThumbnail = (props) => {
   return (
-    <div className="thumbnail-container" onClick={() => props.clickHandler(props.label)}>
+    <button className="thumbnail-container" onClick={() => props.clickHandler(props.label) }>
       <img src={props.image} alt={props.name} />
       <h4 className="thumbnail-name">{props.name}</h4>
       <p className="thumbnail-title">{props.title}</p>
-    </div>
+    </button>
   );
 }
 
 export default PeoplePage;
-
-// Things to include in the Card Details
-// Image
-// Name
-// Content 1: For profile
-// Content 2: For profile 
-// Company Info Array of Hashes: For Current Roles
-// Company Info Array of Hashes: For Past Roles
-
-
-
-
-
-
-

@@ -60,7 +60,9 @@ export default class Nav extends React.Component {
 
 const Logo = () => {
   return (
-    <h3 className="logo">Hiscox Ventures</h3>
+    <Link to="/" style={{textDecoration: "none", color: "black"}}>
+      <h3 className="logo">Hiscox Ventures</h3>
+    </Link>
   )
 }
 
@@ -74,7 +76,7 @@ const NavItem = (props) => {
   if ( props.link ) { 
     return (
       <Link 
-        to={'/' + props.link + '/'}
+        to={'/' + props.link}
         className="nav-item" 
       >
         <li>{props.title}</li>

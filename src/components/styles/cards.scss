@@ -159,8 +159,9 @@
 	margin: 0;
 	padding: 0;
 	border-radius: 20px;
-	box-shadow: 0px 10px 8px -8px #b5b5b5;
+	// box-shadow: 0px 10px 8px -8px #b5b5b5;
 	// box-shadow: 10px 10px 30px #b5b5b5;
+	box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.3); 
 	background-color: white;
 
 	.expertise-image-container {
@@ -233,15 +234,14 @@
 
 
 // People Card Details
-
 .people-tabs {
-	margin-top: 40px; 
 	$padding: 90px 0px;
 	width: calc(100% - 2*$padding);
 	padding: $padding; 
 }
 
 .people-tab-list {
+	height: 20px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -260,19 +260,32 @@
 	transition: all 0.1s ease 0s;
 }
 
+.people-company-images:hover {
+	opacity: 0.9;
+}
+
 .people-card-tabs-button {
 	background-color: white;
+	padding: 10px;
+	color: #303030;
+	transform-origin: center;
+}
+
+.people-card-tabs-button:hover {
+	color: black;
 }
 
 .people-tab-active {
+	font-size: 18px;
+	transition: all 0.1s ease 0s;
 	text-decoration: underline;
 }
 
 .people-tab-list-images {
 	transform: translateX(-20px);
 	display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    height: 100px;
+    grid-template-columns: repeat(6, 18%);
+    height: 110px; 
 }
 
 .people-tabs-images {
@@ -289,4 +302,30 @@
 	transition: all 0.1s ease 0s;
 }
 
+.arrow-down {
+	width: 50px;
+	transform-origin: bottom;
+	animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.scroll-down-button {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.bounceOne {
+	animation-name: bounceOne;
+	animation-timing-function: ease;
+}
+
+@keyframes bounceOne {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.05,.95) translateY(-20px); }
+    30%   { transform: scale(1,1)  translateY(0); }
+    50%   { transform: scale(1,1) translateY(0); }
+    100% { transform: scale(1,1) translateY(0); }
+}
 

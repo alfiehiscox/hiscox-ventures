@@ -1,3 +1,7 @@
+button {
+	background-color: white;
+}
+
 .people-header {
 	background-color: #2F2E41;
 	width: 100%;
@@ -30,6 +34,7 @@
 		height: 150px;
 		border-radius: 50%;
 		object-fit: cover;
+		box-shadow: 0px 0px 50px 0px #828282; 
 	}
 
 	.thumbnail-name {

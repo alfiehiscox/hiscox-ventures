@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import ArrowDown from '../../images/Arrow-down.svg';
 
 function PeopleCardDefault(props) {
   return (
@@ -9,6 +10,9 @@ function PeopleCardDefault(props) {
         <p>{props.description}</p>
         <p>{props.info}</p>
       </div>
+      <button className="scroll-down-button" onClick={() => { document.querySelector(".people-title").scrollIntoView({behavior: 'smooth'}); }}>
+        <img className="arrow-down bounceOne" src={ArrowDown} alt="Arrow Pointing down" />
+      </button>
     </div>
   );
 }
@@ -64,12 +68,15 @@ const PeopleTabs = (props) => {
           const imageActive = (activeTab !== child.props.label ? "" : " people-image-active" ) 
           if (props.images) {
             return (
-              <img 
-                key={child.props.label} 
-                className={"people-company-images" + imageActive}
-                onClick={() => setActiveTab(child.props.label)} 
-                src={child.props.image} 
-                alt={child.props.label} />
+              <button
+                onKeyDown={() => setActiveTab(child.props.label)}
+                onClick={() => setActiveTab(child.props.label)} >
+                <img 
+                  key={child.props.label} 
+                  className={"people-company-images" + imageActive}
+                  src={child.props.image} 
+                  alt={child.props.label} />
+              </button>
             );
           } else {
             return (
@@ -95,7 +102,6 @@ const CurrentRoles = (props) => {
       <PeopleTabs
         images={true}>
         {props.companyInfo.map((info) => {
-          console.log(info.name);
           return (
             <div key={info.name} label={info.name} image={info.image}>
               <h4>{info.name}</h4>

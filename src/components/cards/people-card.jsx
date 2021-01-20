@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 function PeopleCardDefault(props) {
   return (
     <div className="people-card default">
-      <img src={props.image} alt={props.name} />
+      <img className="main-image" src={props.image} alt={props.name} />
       <div className="people-card-content">
         <h4>{props.name}</h4>
         <p>{props.description}</p>
@@ -21,20 +21,21 @@ const PeopleCardDetail = (props) => {
         <div label="Profile">
           <div className="profile-card">
             <h2>{props.name}</h2>
-            <p>{props.content1}</p>
-            <p>{props.content2}</p>
+            <p>{props.profileContent1}</p>
+            <p>{props.profileContent2}</p>
           </div>
         </div>
         <div label="Current Roles">
           <CurrentRoles 
-            intro="Martin currently has non-executive roles at the following companies:"
+            introCurrentRoles="Martin currently has non-executive roles at the following companies:"
             companyInfo={props.companyInfo}
           />
         </div>
         <div label="Work History">
-          <div>
-            <h1>Hello from Work History</h1>
-          </div>
+          <CurrentRoles 
+            introCurrentRoles="Martin’s previous roles:"
+            companyInfo={props.historyInfo}
+          />
         </div>
         <div label="Interests">
           <div>
@@ -51,17 +52,21 @@ const PeopleTabs = (props) => {
   const tabDisplay = ( props.images ? "people-tabs-images" : "people-tabs")
   const tabDisplayList = (props.images ? "people-tab-list-images" : "people-tab-list")
 
+  useEffect(() => {
+    setActiveTab(props.children[0].props.label);
+  }, [props.children]);
+
   return (
     <div className={tabDisplay}>
       <div className={tabDisplayList}>
         {props.children.map((child) => {
           const tabActive = (activeTab !== child.props.label ? "" : " people-tab-active" ) 
-
+          const imageActive = (activeTab !== child.props.label ? "" : " people-image-active" ) 
           if (props.images) {
             return (
               <img 
                 key={child.props.label} 
-                className="people-company-images" 
+                className={"people-company-images" + imageActive}
                 onClick={() => setActiveTab(child.props.label)} 
                 src={child.props.image} 
                 alt={child.props.label} />
@@ -86,10 +91,11 @@ const PeopleTabs = (props) => {
 const CurrentRoles = (props) => {
   return (
     <div className="current-roles-card">
-      <p>{props.intro}</p>
+      <p>{props.introCurrentRoles}</p>
       <PeopleTabs
         images={true}>
         {props.companyInfo.map((info) => {
+          console.log(info.name);
           return (
             <div key={info.name} label={info.name} image={info.image}>
               <h4>{info.name}</h4>
@@ -97,7 +103,6 @@ const CurrentRoles = (props) => {
             </div>
           );
         })}
-
       </PeopleTabs>
     </div>
   );

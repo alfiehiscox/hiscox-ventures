@@ -211,7 +211,7 @@
 
 .people-card {
 	width: 75%;
-	height:	475px;
+	height:	450px;
 	margin: 80px auto;
 	background-color: white;
 	border-radius: 20px;
@@ -257,6 +257,7 @@
 	border-radius: 50%;
 	margin: 10px 10px;
 	box-shadow: 10px 10px 20px #b5b5b5;
+	transition: all 0.1s ease 0s;
 }
 
 .people-card-tabs-button {
@@ -269,6 +270,9 @@
 
 .people-tab-list-images {
 	transform: translateX(-20px);
+	display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 100px;
 }
 
 .people-tabs-images {
@@ -277,6 +281,12 @@
 
 .current-roles-card {
 	padding: 20px 6rem;
+}
+
+.people-image-active {
+	width: 80px;
+	height: 80px;
+	transition: all 0.1s ease 0s;
 }
 
 

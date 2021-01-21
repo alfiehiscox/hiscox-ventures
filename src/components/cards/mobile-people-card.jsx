@@ -24,4 +24,4 @@ export default MobilePeopleCard;
 
 
 // https://www.npmjs.com/package/react-swipeable
-// Using the swipeable npm package gonna test it out
+// Using the swipeable npm package gonna test it outq

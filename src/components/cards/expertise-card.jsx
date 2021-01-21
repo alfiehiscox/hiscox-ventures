@@ -3,7 +3,7 @@ import '../styles/cards.scss';
 
 export default function ExpertiseCard(props) {
   return (
-    <div className="expertise-card-container">
+    <div className={"expertise-card-container" + props.itemNum}>
       <div className="expertise-image-container">
         <img src={props.image} alt={props.title} />
       </div>

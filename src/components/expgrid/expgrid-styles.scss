@@ -2,11 +2,11 @@ $box-shadow: 10px 10px 20px #BDBDBD;
 $serif-font: 'Source Serif Pro', serif;
 
 .expgrid-container {
-	margin-top: 90px;
+	margin-top: 50px;
 }
 
 .exp-grid {
-	margin: 50px 0;
+	margin: 0;
 }
 
 .grid-row {
@@ -16,6 +16,15 @@ $serif-font: 'Source Serif Pro', serif;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	z-index: 2;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-item-container {
+	display: flex;
+	flex-direction: columns;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .grid-item {

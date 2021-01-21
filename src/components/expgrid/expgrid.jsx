@@ -123,7 +123,7 @@ class GridItem extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="grid-item-container">
         <button className="grid-item" onClick={ this.handleClick }>
           <img src={this.props.image} alt={this.props.title} />
           <h4>{this.props.title}</h4>

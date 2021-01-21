@@ -27,6 +27,7 @@ const ExpertiseHeader = (props) => {
                      Fusce blandit euismod nisl a vulputate. 
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                      Fusce blandit euismod nisl a vulputate"
+            itemNum=" item-1"
           />
           <ExpertiseCard 
             image={Results}
@@ -35,6 +36,7 @@ const ExpertiseHeader = (props) => {
                      Fusce blandit euismod nisl a vulputate. 
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                      Fusce blandit euismod nisl a vulputate"
+            itemNum=" item-2"
           />
           <ExpertiseCard 
             image={Teamwork}
@@ -43,6 +45,7 @@ const ExpertiseHeader = (props) => {
                      Fusce blandit euismod nisl a vulputate. 
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                      Fusce blandit euismod nisl a vulputate"
+            itemNum=" item-3"
           />
         </div>
       </div>

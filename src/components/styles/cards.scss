@@ -360,3 +360,79 @@
     100% { transform: scale(1,1) translateY(0); }
 }
 
+@media (max-width: 900px) {
+	.people-card {
+	width: 85%;
+	height:	450px;
+	margin: 100px auto;
+
+		.main-image {
+			top: -60px;
+			width: 120px;
+			height: 120px;
+		}
+	}
+
+	.default {
+		.people-card-content {
+			padding: 20px;
+			padding-top: 60px; 
+
+			h4 {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.people-tabs {
+		padding: 0;
+		padding-top: 90px;
+		height: calc(100% - 90px); 
+	}
+
+	.profile-card {
+		padding: 0px 15px;
+	}
+
+	.people-tab-content {
+		height: 85%;
+	}
+
+	.people-tab-active {
+		font-size: 16px;
+	}
+
+	.people-tab-list {
+		height: 40px;
+	}
+
+	.current-roles-card {
+    	padding: 10px;
+    }
+
+    .people-tab-list-images {
+	    transform: translateX(0px);
+	    display: grid;
+	    grid-template-columns: repeat(4, 25%);
+	    height: 60px;
+	}
+
+	.people-company-images {
+		width: 40px;
+		height: 40px;
+		box-shadow: 0px 5px 20px #b5b5b5;
+		margin: 0;
+	}
+
+	.people-image-active {
+		width: 45px;
+		height: 45px;
+		transition: all 0.1s ease 0s;
+	}
+
+	button {
+		margin: 0;
+		padding: 0;
+	}
+}
+

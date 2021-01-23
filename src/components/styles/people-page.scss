@@ -58,3 +58,40 @@ button {
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 85px;
 }
+
+@media (max-width: 900px) {
+	.people-grid-container {
+		width: 90%;
+	}
+
+	.thumbnail-container {
+		width: 100%;
+		height: 175px;
+
+		img {
+			width: 110px;
+			height: 110px;
+			box-shadow: 0px 0px 40px 0px #828282; 
+		}
+
+		.thumbnail-name {
+			padding: 0;
+			margin: 0px 5px;
+		}
+
+		.thumbnail-title {
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			font-size: 13px;
+		}
+	}
+
+	.people-grid {
+		padding: 30px 0px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 5px;
+	}	
+}

@@ -69,10 +69,10 @@ const PeopleTabs = (props) => {
           if (props.images) {
             return (
               <button
+                key={child.props.label}
                 onKeyDown={() => setActiveTab(child.props.label)}
                 onClick={() => setActiveTab(child.props.label)} >
                 <img 
-                  key={child.props.label} 
                   className={"people-company-images" + imageActive}
                   src={child.props.image} 
                   alt={child.props.label} />

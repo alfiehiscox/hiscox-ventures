@@ -11,7 +11,7 @@
 	justify-content: space-around;
 	align-items: center;
 
-	div {
+	> div {
 		padding: 20px;
 	}
 }
@@ -26,10 +26,15 @@
 	align-items: center;
 	transition: all 1.5s ease;
 
-	div {
+	> div {
 		height: 90%;
 		width: 32%;
 		background-color: #202021;
 		color: white;
 	}
+}
+
+.housing-tab {
+	width: 100%;
+	height: 20px;
 }

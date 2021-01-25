@@ -2,7 +2,14 @@ import React from 'react';
 import '../components/styles/housing.scss';
 import { Layout } from '../components/layout';
 import HousingTabs from '../components/HousingTabs';
+import PhotoGridFour from '../components/grids/PhotoGridFour';
 import "@fontsource/quicksand"
+
+// Images
+import Deer from '../images/renovations-images/deer.jpeg';
+import Museum from '../images/renovations-images/museum.jpeg';
+import Sculpter from '../images/renovations-images/sculpter.jpeg';
+import Garden from '../images/renovations-images/garden.jpeg';
 
 const HousingPage = () => {
   return (
@@ -20,16 +27,21 @@ const HousingPage = () => {
         </p>
         <HousingTabs>
           <div>
-            <h2 className="page-title" >The Homestead</h2>
+            <h2 className="page-title">Period Renovations</h2>
+            <PhotoGridFour
+              images={[{label: "deer", image: Deer}, 
+                       {label: "museum", image: Museum}, 
+                       {label: "sculpter", image: Sculpter}, 
+                       {label: "garden", image: Garden}]}
+            />
           </div>
           <div>
-            <h2 className="page-title" >Barn Conversion</h2>
+            <h2 className="page-title">Hard Wood Construction</h2>
           </div>
           <div>
-            <h2 className="page-title" >Le Magerie Bas</h2>
+            <h2 className="page-title">Landscaping</h2>
           </div>
         </HousingTabs>
-
       </div>
     </Layout>
   );

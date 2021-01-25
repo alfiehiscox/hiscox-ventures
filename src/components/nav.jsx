@@ -31,21 +31,25 @@ export default class Nav extends React.Component {
   }
 
   render() {
+    const navStyles = this.props.dark ? {backgroundColor: "#202021"} : {backgroundColor: "white"};
+
     return (
-      <div className="nav-bar" >
-        <Logo />
-        <Collapsible mobile={this.state.viewportWidth < 900} setOpen={this.setOpen} open={this.state.open}>
-          <ul className="nav">
+      <div className="nav-bar" style={navStyles}>
+        <Logo dark={this.props.dark} />
+        <Collapsible mobile={this.state.viewportWidth < 900} setOpen={this.setOpen} open={this.state.open} dark={this.props.dark}>
+          <ul className="nav" style={navStyles}>
             <div role="button" tabIndex={0} className="exit" onClick={this.setOpen} onKeyDown={this.handleClick}>X</div>
-            <NavItem title="About" link='about' />
-            <NavItem title="Expertise" link='expertise' />
-            <NavItem title="People" link='people' />
+            <NavItem dark={this.props.dark} title="About" link='about' />
+            <NavItem dark={this.props.dark} title="Expertise" link='expertise' />
+            <NavItem dark={this.props.dark} title="People" link='people' />
             <NavItem 
+              dark={this.props.dark}
               title="Sectors" 
               setSectorOpen={this.setSectorOpen} 
               sectorOpen={this.state.sectorOpen} 
               mobile={this.state.viewportWidth < 900} >
               <Dropdown 
+                dark={this.props.dark}
                 text="Something Random" 
                 mobile={this.state.viewportWidth < 900} 
                 setSectorFunction={this.setSectorOpen} 
@@ -58,15 +62,18 @@ export default class Nav extends React.Component {
   }
 }
 
-const Logo = () => {
+const Logo = (props) => {
+  const logoStyles = props.dark ? {color: "white"} : {color: "black"}; 
   return (
     <Link to="/" style={{textDecoration: "none", color: "black"}}>
-      <h3 className="logo">Hiscox Ventures</h3>
+      <h3 className="logo" style={logoStyles} >Hiscox Ventures</h3>
     </Link>
   )
 }
 
 const NavItem = (props) => {
+  const navItemStyles = props.dark ? {backgroundColor: '#202021', color: "white", outline: '0'} : {color: "black", outline: '0'};
+  const buttonNavStyles = props.dark ? {backgroundColor: '#202021', color: "white"} : {backgroundColor: 'white'};
   const handleMouse = () => {
     if (props.setSectorOpen) {
       props.setSectorOpen();
@@ -78,6 +85,7 @@ const NavItem = (props) => {
       <Link 
         to={'/' + props.link}
         className="nav-item" 
+        style={navItemStyles}
       >
         <li>{props.title}</li>
       </Link>
@@ -85,7 +93,7 @@ const NavItem = (props) => {
   } else if ( props.mobile ) {
     return (
       <div 
-        style={{outline: '0'}}
+        style={navItemStyles}
         role="button"
         tabIndex={-1} 
         className='nav-item' 
@@ -98,7 +106,7 @@ const NavItem = (props) => {
   }
   return (
     <button
-      style={{backgroundColor: 'white'}}
+      style={buttonNavStyles}
       className="nav-item" 
       onMouseEnter={ () => handleMouse() } 
       onMouseLeave={ () => handleMouse() } 
@@ -110,10 +118,14 @@ const NavItem = (props) => {
 }
 
 const Dropdown = (props) => {
+  const dropdownStyle = props.dark ? {backgroundColor: "#202021"} : {backgroundColor: "white"}
   if (!props.mobile) {
     return (
-      <div className="dropdown">
-        <p>{props.text}</p>
+      <div className="dropdown" style={dropdownStyle}>
+        <NavItem dark={props.dark} title="Housing Development" link="housing" />
+        <NavItem dark={props.dark} title="Automobile Renovation" link="cars" />
+        <NavItem dark={props.dark} title="Software" link="software" />
+        <NavItem dark={props.dark} title="Cinematography" link="cinematography" />
       </div>
     );
   };
@@ -128,12 +140,12 @@ const Dropdown = (props) => {
       timeout={ 300 }
       classNames="sector-styles"
     >
-      <ul className="nav">
+      <ul className="nav" style={dropdownStyle}>
         <button className="exit" style={{cursor: 'pointer'}} onClick={ () => handleClick() }>X</button>
-        <NavItem title="Housing" link="sectors"/>
-        <NavItem title="Automobiles" link="sectors"/>
-        <NavItem title="Software" link="sectors"/>
-        <NavItem title="Cinematography" link="sectors"/>
+        <NavItem dark={props.dark} title="Housing" link="sectors"/>
+        <NavItem dark={props.dark} title="Automobiles" link="sectors"/>
+        <NavItem dark={props.dark} title="Software" link="sectors"/>
+        <NavItem dark={props.dark} title="Cinematography" link="sectors"/>
       </ul>
     </CSSTransition>
   )
@@ -145,19 +157,21 @@ class Collapsible extends React.Component {
   }
 
   render() {
+    const collapsibleDark = this.props.dark ? {backgroundColor: "#202021", cursor: 'pointer'} : {backgroundColor: "white", cursor: 'pointer'};
+    const bugerDark = this.props.dark ? {backgroundColor: 'white'} : {backgroundColor: 'black'}
     if (this.props.mobile) {
       return (
         <div>
           <button 
             className="burger-containter" 
-            style={{cursor: 'pointer'}} 
+            style={collapsibleDark} 
             onClick={ this.handleClick }
             onKeyDown={ this.handleClick }
           >
             <div className="burger">
-              <div className="line-1"></div>
-              <div className="line-2"></div>
-              <div className="line-3"></div>
+              <div style={bugerDark} className="line-1"></div>
+              <div style={bugerDark} className="line-2"></div>
+              <div style={bugerDark} className="line-3"></div>
             </div>
           </button>
           <CSSTransition 

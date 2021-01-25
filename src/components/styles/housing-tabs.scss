@@ -1,0 +1,35 @@
+.housing-window {
+	background-color: #202021;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.housing-tabs {
+	margin: 10px;
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	div {
+		padding: 20px;
+	}
+}
+
+.housing-carousel-container {
+	width: 300%;
+	height: 500px;
+	margin: 0 auto;
+	background-color: #202021;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transition: all 1.5s ease;
+
+	div {
+		height: 90%;
+		width: 32%;
+		background-color: #202021;
+		color: white;
+	}
+}

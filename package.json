@@ -17,6 +17,7 @@
   "license": "0BSD",
   "dependencies": {
     "@fontsource/audiowide": "^4.1.0",
+    "@fontsource/quicksand": "^4.1.0",
     "@fontsource/source-serif-pro": "^4.1.0",
     "gatsby": "^2.30.3",
     "gatsby-plugin-sass": "^3.0.0",

@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
-$serif-font: 'Source Serif Pro', serif;
-
 .tab-list {
 	border-box: 1px solid #ccc;
 	display: flex;
@@ -10,7 +7,7 @@ $serif-font: 'Source Serif Pro', serif;
 .tab-list-item {
   width: 100%;
   padding: 10px;
-  font-family: $serif-font;
+  font-family: "Quicksand";
   font-size: 14px;
   text-align: center;
   background-color: #E1E1E1;
@@ -40,7 +37,7 @@ $serif-font: 'Source Serif Pro', serif;
 
 	.tab-list-item {
 	  list-style: none;
-	  font-family: $serif-font;
+	  font-family: "Quicksand";
 	  font-size: 18px;
 	  background-color: white;
 	}

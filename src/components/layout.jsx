@@ -3,11 +3,12 @@ import Nav from './nav';
 import "@fontsource/source-serif-pro";
 
 function Layout(props) {
+  
   return (
     <div>
-      <Nav />
+      <Nav dark={props.dark}/>
       {props.children}
-      <Footer />
+      <Footer dark={props.dark}/>
     </div>
   )
 }
@@ -25,8 +26,9 @@ function Container(props) {
 }
 
 function Footer(props) {
+  const footerStyles = props.dark ? {backgroundColor: '#202021', color: 'white'} : {backgroundColor: 'white', color: "black"}
   return (
-    <div className="footer">
+    <div className="footer" style={footerStyles}>
       <h4> Footer </h4>
     </div>
   );

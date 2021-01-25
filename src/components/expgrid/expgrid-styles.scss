@@ -1,5 +1,4 @@
 $box-shadow: 10px 10px 20px #BDBDBD; 
-$serif-font: 'Source Serif Pro', serif;
 
 .expgrid-container {
 	margin-top: 50px;
@@ -42,7 +41,7 @@ $serif-font: 'Source Serif Pro', serif;
 
 	h4 {
 		font-weight: normal;
-		font-family: $serif-font;
+		font-family: "Quicksand";
 		font-size: 14px;
 		padding: 20px;
 		margin: 5px;
@@ -87,7 +86,7 @@ $serif-font: 'Source Serif Pro', serif;
 	.info-card-content {
 		width: 63%;
 		margin: auto 0;
-		font-family: $serif-font;
+		font-family: "Quicksand";
 	}
 
 }

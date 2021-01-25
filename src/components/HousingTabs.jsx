@@ -31,7 +31,7 @@ const HousingTabs = (props) => {
 
 const Tab = (props) => {
   return (
-    <div onClick={() => {props.onClick(props.label)}}>{props.children}</div>
+    <button style={{backgroundColor: "#202021"}} onClick={() => {props.onClick(props.label)}}>{props.children}</button>
   );
 }
 

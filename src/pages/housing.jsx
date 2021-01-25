@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../components/styles/housing.scss';
 import { Layout } from '../components/layout';
 import HousingTabs from '../components/HousingTabs';

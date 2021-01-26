@@ -5,6 +5,14 @@
 	color: white;
 	padding-top: 80px;
 	font-family: "Quicksand";
+
+	h3 {
+		font-size: 24px;	
+	}
+
+	p {
+		color: #d9d9d9;
+	}
 }
 
 .housing-main-title {
@@ -23,8 +31,36 @@
 
 // For the Homestead Page:
 .page-title {
+	margin: 80px 0;
 	font-size: 40px;
 	font-weight: lighter;
 	width: 100%;
 	text-align: center;
+}
+
+.renovation-intro {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+
+	.renovation-intro-content {
+		width: 50%;
+		text-align: justify;
+		font-size: 16px;
+
+		p {
+			color: #d9d9d9;
+		}
+	}
+}
+
+.renovation-body-1 {
+	margin-top: 80px;
+	text-align: center;
+
+	p {
+		margin: 20px 100px;
+		font-size: 16px;
+		color: #d9d9d9;
+	}
 }

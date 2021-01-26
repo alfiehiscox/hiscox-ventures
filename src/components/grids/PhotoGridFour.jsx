@@ -3,13 +3,21 @@ import '../styles/photo-grid-four.scss';
 
 const PhotoGridFour = (props) => {
   const [activeImage, setActiveImage] = useState(props.images[0].label);
+  let style, grid;
+  if (props.right) {
+    grid = "pg-four-grid-right"
+    style = "pg-four-active-image-right"
+  } else {
+    grid = "pg-four-grid"
+    style = "pg-four-active-image"
+  }
   
   const images = props.images.map((image) => {
-    if (image.label == activeImage) {
-      return <img src={image.image} alt={image.label} className="pg-four-image pg-four-active-image" />
+    if (image.label === activeImage) {
+      return <img key={image.label} src={image.image} alt={image.label} className={`pg-four-image ${style}`} />
     } else {
       return (
-        <button style={{backgroundColor: "#202021"}} onClick={() => setActiveImage(image.label)}>
+        <button key={image.label} style={{backgroundColor: "#202021"}} onClick={() => setActiveImage(image.label)}>
           <img src={image.image} alt={image.label} className="pg-four-image" />
         </button>
       );
@@ -17,7 +25,7 @@ const PhotoGridFour = (props) => {
   })
 
   return (
-    <div className="pg-four-grid">
+    <div className={grid}>
       {images}
     </div>
   );

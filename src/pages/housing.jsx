@@ -3,13 +3,11 @@ import '../components/styles/housing.scss';
 import { Layout } from '../components/layout';
 import HousingTabs from '../components/HousingTabs';
 import PhotoGridFour from '../components/grids/PhotoGridFour';
-import "@fontsource/quicksand"
+import "@fontsource/quicksand";
+import SmallCarouselFour from '../components/grids/smallCarouselFour';
 
-// Images
-import Deer from '../images/renovations-images/deer.jpeg';
-import Museum from '../images/renovations-images/museum.jpeg';
-import Sculpter from '../images/renovations-images/sculpter.jpeg';
-import Garden from '../images/renovations-images/garden.jpeg';
+// Data
+import Data from '../data/renovation-18th-data';
 
 const HousingPage = () => {
   return (
@@ -28,12 +26,64 @@ const HousingPage = () => {
         <HousingTabs>
           <div>
             <h2 className="page-title">Period Renovations</h2>
-            <PhotoGridFour
-              images={[{label: "deer", image: Deer}, 
-                       {label: "museum", image: Museum}, 
-                       {label: "sculpter", image: Sculpter}, 
-                       {label: "garden", image: Garden}]}
-            />
+            <div className="renovation-intro">
+              <div className="renovation-intro-content">
+                <h3>A Love to Build</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat
+                  ipsum porta justo finibus vehicula.
+
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat 
+                  ipsum porta justo finibus vehicula.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat
+                  ipsum porta justo finibus vehicula.
+
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat 
+                  ipsum porta justo finibus vehicula.
+                </p>
+              </div>
+              <PhotoGridFour
+                images={Data}
+              />
+            </div>
+            <div className="renovation-body-1">
+              <h3>Mixing The Modern With The Classical</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat
+                  ipsum porta justo finibus vehicula.
+
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat 
+                  ipsum porta justo finibus vehicula.</p>
+              <PhotoGridFour
+                images={Data}
+                right={true}
+              />
+            </div>
+            <div className="renovation-body-1">
+              <h3>18th Century Architecture</h3>
+              <SmallCarouselFour 
+                elements={Data}
+              />
+            </div>
           </div>
           <div>
             <h2 className="page-title">Hard Wood Construction</h2>

@@ -1,6 +1,6 @@
 .housing-window {
 	background-color: #202021;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -18,7 +18,7 @@
 
 .housing-carousel-container {
 	width: 300%;
-	height: 500px;
+	height: auto;
 	margin: 0 auto;
 	background-color: #202021;
 	display: flex;

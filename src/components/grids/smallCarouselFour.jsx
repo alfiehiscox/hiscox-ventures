@@ -21,7 +21,7 @@ const SmallCarouselFour = (props) => {
   useEffect(() => {
     const index = position / 25;
     setCurrentImage(props.elements[index].label)
-  }, [position]);
+  }, [position, props.elements]);
 
   const hoverStyle = hovered ? {display: 'flex'} : {display: 'none'};
 
@@ -33,7 +33,7 @@ const SmallCarouselFour = (props) => {
 
   return (
     <div className="small-carousel-container">
-      <div className="small-carousel-window" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <banner role="tabpanel" className="small-carousel-window" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <div>
           <button className="sm-c-nav sm-c-nav-left" style={hoverStyle} onClick={() => handleSlide(-25)}>&lt;</button>
           <div 
@@ -44,7 +44,7 @@ const SmallCarouselFour = (props) => {
           </div>
           <button className="sm-c-nav sm-c-nav-right" style={hoverStyle} onClick={() => handleSlide(25)}>></button>
         </div>
-      </div>
+      </banner>
       <div className="sm-c-content-container">
         {props.elements.map((elem) => {
           if (elem.label !== currentImage ) return undefined;

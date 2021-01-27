@@ -56,8 +56,8 @@ const SmallCarouselFour = (props) => {
                   <img src={arrowRight} alt="Arrow Right" />
                 </button>
               </div>
-              <p className="sm-c-desciption">{elem.content.desciption}</p>
-              <p className="sm-c-desciption">{elem.content.desciption2}</p>
+              <p className="sm-c-description">{elem.content.description}</p>
+              <p className="sm-c-description">{elem.content.description2}</p>
             </div>
           );
         })}

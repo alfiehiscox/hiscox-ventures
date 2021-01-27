@@ -9,7 +9,7 @@ const Renovation18Data = [
     image: Yosemite, 
     content: {
       title: "Yosemite",
-      desciption: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Sed at ligula non nunc laoreet dapibus eu vitae justo. 
                   Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
                   interdum tincidunt tellus eleifend id. Aenean volutpat
@@ -27,7 +27,7 @@ const Renovation18Data = [
     image: Museum, 
     content: {
       title: "Museum",
-      desciption: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Sed at ligula non nunc laoreet dapibus eu vitae justo. 
                   Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
                   interdum tincidunt tellus eleifend id. Aenean volutpat
@@ -38,7 +38,7 @@ const Renovation18Data = [
                   Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
                   interdum tincidunt tellus eleifend id. Aenean volutpat 
                   ipsum porta justo finibus vehicula.`,
-      desciption2: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      description2: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Sed at ligula non nunc laoreet dapibus eu vitae justo. 
                   Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
                   interdum tincidunt tellus eleifend id. Aenean volutpat
@@ -50,7 +50,7 @@ const Renovation18Data = [
     image: France, 
     content: {
       title: "France",
-      desciption: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Sed at ligula non nunc laoreet dapibus eu vitae justo. 
                   Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
                   interdum tincidunt tellus eleifend id. Aenean volutpat
@@ -68,7 +68,7 @@ const Renovation18Data = [
     image: Garden, 
     content: {
       title: "Garden",
-      desciption: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Sed at ligula non nunc laoreet dapibus eu vitae justo. 
                   Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
                   interdum tincidunt tellus eleifend id. Aenean volutpat

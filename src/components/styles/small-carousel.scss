@@ -7,12 +7,12 @@
 .small-carousel-window {
 	$width: 50%;
 	width: $width;
-	height: 400px;
+	height: 200%;
 	overflow: hidden;
 	position: relative;
 
 	.sm-c-grid {
-		width: 400%;
+		width: 401%;
 		height: 100%;
 		display: flex;
 		justify-content: space-around;
@@ -70,7 +70,7 @@
 		padding: 0;
 	}
 
-	.sm-c-desciption {
+	.sm-c-description {
 		text-align: left;
 		margin: 10px 0;
 		padding: 0;

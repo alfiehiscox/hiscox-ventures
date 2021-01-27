@@ -1,7 +1,7 @@
 .pg-four-grid {
 	width: 400px;
 	height: 400px;
-	background: #202021;
+	background: inherit;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(4, 1fr);
@@ -25,7 +25,7 @@
 }
 
 .pg-four-grid-right {
-	background: #202021;
+	background: inherit;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(3, 1fr);

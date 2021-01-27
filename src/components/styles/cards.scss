@@ -159,8 +159,8 @@
 	margin: 0;
 	padding: 0;
 	border-radius: 20px;
-	box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.3); 
-	background-color: white;
+	// box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.3); 
+	background-color: rgba(255, 255, 255, 0.3);
 
 	.expertise-image-container {
 		width: 100%;
@@ -177,8 +177,11 @@
 
 	.expertise-content-container {
 		width: calc(100% - 50px);
-		padding: 0 25px;
+		padding: 20px 25px;
 		font-family: "Quicksand";
+		background: rgba(63, 61, 86, 1);
+		border-radius: 0 0 20px 20px;
+		color: white;
 
 		h2 {
 			text-align: center;

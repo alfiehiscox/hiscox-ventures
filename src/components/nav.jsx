@@ -123,7 +123,7 @@ const Dropdown = (props) => {
     return (
       <div className="dropdown" style={dropdownStyle}>
         <NavItem dark={props.dark} title="Housing Development" link="housing" />
-        <NavItem dark={props.dark} title="Automobile Renovation" link="cars" />
+        <NavItem dark={props.dark} title="Classic Car Renovation" link="cars" />
         <NavItem dark={props.dark} title="Software" link="software" />
         <NavItem dark={props.dark} title="Cinematography" link="cinematography" />
       </div>

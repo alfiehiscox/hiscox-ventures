@@ -17,7 +17,7 @@ const PhotoGridFour = (props) => {
       return <img key={image.label} src={image.image} alt={image.label} className={`pg-four-image ${style}`} />
     } else {
       return (
-        <button key={image.label} style={{backgroundColor: "#202021"}} onClick={() => setActiveImage(image.label)}>
+        <button key={image.label} style={{backgroundColor: "inherit"}} onClick={() => setActiveImage(image.label)}>
           <img src={image.image} alt={image.label} className="pg-four-image" />
         </button>
       );

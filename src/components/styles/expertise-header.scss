@@ -1,10 +1,17 @@
 .header-background {
-	background-image: url(../../images/background-test.svg);
+	background-image: url(../../images/better-japanese.png);
 	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 650px;
 	margin: 0;
 	padding: 40px 0;
+}
+
+.expertise-wavy-svg {
+	transform: translateY(-65%);
+	z-index: -1;	
+	display: block;	
 }
 
 .outer-expertise-card-container {
@@ -17,8 +24,16 @@
 
 .nav-bar-cover {
 	width: 100%;
-	background-color: #2F2E41;
+	background-color: white;
 	height: 80px;
+}
+
+.expertise-header-title {
+	font-family: "Quicksand";
+	font-size: 56px;
+	text-align: center;
+	font-weight: lighter;
+	margin: 5px 0px;
 }
 
 @media (max-width: 900px) {

@@ -27,9 +27,9 @@
 @media (max-width: 900px) {
 	.fullpage-image-grid {
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 100px 100px 100px 300px;
+		grid-template-rows: auto;
 		width: calc(100% - 20px);
-		gap: 0px;
+		gap: 5px;
 		height: auto;
 	}
 
@@ -38,6 +38,7 @@
 		grid-row: 4 / 5;
 		height: 100%;
 		overflow: scroll;
+		padding: 5px;
 
 		h3 {
 			margin: 0;

@@ -44,7 +44,8 @@
 
 @media (max-width: 900px) {
 	.pg-four-grid {
-		width: 100%;
+		width: 90%;
+		height: auto;
 	}
 
 	.pg-four-grid-right {
@@ -53,6 +54,8 @@
 		grid-template-rows: repeat(3, 1fr);
 		gap: 5px;
 		padding: 10px 10px;
+		width: calc(100% - 20px);
+
 	}
 
 	.pg-four-active-image-right {

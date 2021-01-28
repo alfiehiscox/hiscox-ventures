@@ -111,6 +111,24 @@
 	padding: 10px 40px;
 }
 
+@media (max-width: 1200px) {
+	.cars-grid {
+		padding: 40px 10px;
+		width: calc(100% - 20px);
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+
+	.car-modal-container {
+		.sm-c-content-container{
+			.sm-c-description:nth-child(2) {
+				height: 175px;
+				overflow: scroll;
+			}
+		} 
+	}
+}
+
 @media (max-width: 900px) {
 	.cars-grid {
 		padding: 40px 10px;

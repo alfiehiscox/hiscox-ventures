@@ -60,7 +60,7 @@ const CarModal = (props) => {
             {CarsData.map((car) => {
               if (car.label !== props.car) return undefined;
               return (
-                <CarModalCard car={car} handleOpen={props.handleOpen}/>
+                <CarModalCard key={car.label} car={car} handleOpen={props.handleOpen}/>
               );
             })}
           </div>

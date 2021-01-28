@@ -90,8 +90,29 @@
 }
 
 
-@media (max-width: 1200px) {
-	.small-carousel-window {
-		height: 300px;
+@media (max-width: 900px) {
+	.small-carousel-container {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		margin: 40px 5px;
 	}
+
+	.small-carousel-window {
+		$width: 100%;
+		width: $width;
+		height: 200%;
+	}
+
+	.sm-c-content-container {
+		width: calc(100% - 20px);
+		padding: 0px 10px;
+	
+		.sm-c-description {
+			margin: 10px 0;
+			font-size: 14px;
+			color: #d9d9d9;
+		}
+	}
+
 }

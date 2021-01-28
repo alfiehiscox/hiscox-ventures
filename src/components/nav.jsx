@@ -142,10 +142,10 @@ const Dropdown = (props) => {
     >
       <ul className="nav" style={dropdownStyle}>
         <button className="exit" style={{cursor: 'pointer'}} onClick={ () => handleClick() }>X</button>
-        <NavItem dark={props.dark} title="Housing" link="sectors"/>
-        <NavItem dark={props.dark} title="Automobiles" link="sectors"/>
-        <NavItem dark={props.dark} title="Software" link="sectors"/>
-        <NavItem dark={props.dark} title="Cinematography" link="sectors"/>
+        <NavItem dark={props.dark} title="Housing" link="housing"/>
+        <NavItem dark={props.dark} title="Automobiles" link="cars"/>
+        <NavItem dark={props.dark} title="Software" link="software"/>
+        <NavItem dark={props.dark} title="Cinematography" link="cinematography"/>
       </ul>
     </CSSTransition>
   )

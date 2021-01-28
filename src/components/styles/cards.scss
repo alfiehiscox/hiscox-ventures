@@ -366,9 +366,9 @@
 
 @media (max-width: 900px) {
 	.people-card {
-	width: 85%;
-	height:	450px;
-	margin: 100px auto;
+		width: 85%;
+		height:	450px;
+		margin: 100px auto;
 
 		.main-image {
 			top: -60px;
@@ -396,10 +396,12 @@
 
 	.profile-card {
 		padding: 0px 15px;
+		font-size: 14px;
 	}
 
 	.people-tab-content {
 		height: 85%;
+
 	}
 
 	.people-tab-active {
@@ -412,6 +414,7 @@
 
 	.current-roles-card {
     	padding: 10px;
+    	font-size: 14px;
     }
 
     .people-tab-list-images {

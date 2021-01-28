@@ -33,7 +33,7 @@ const SmallCarouselFour = (props) => {
 
   return (
     <div className="small-carousel-container">
-      <banner role="tabpanel" className="small-carousel-window" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <section role="button" tabIndex={-1} className="small-carousel-window" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <div>
           <button className="sm-c-nav sm-c-nav-left" style={hoverStyle} onClick={() => handleSlide(-25)}>&lt;</button>
           <div 
@@ -44,12 +44,12 @@ const SmallCarouselFour = (props) => {
           </div>
           <button className="sm-c-nav sm-c-nav-right" style={hoverStyle} onClick={() => handleSlide(25)}>></button>
         </div>
-      </banner>
+      </section>
       <div className="sm-c-content-container">
         {props.elements.map((elem) => {
           if (elem.label !== currentImage ) return undefined;
           return (
-            <div>
+            <div key={elem.label}>
               <div className="sm-c-title-container">
                 <h3 className="sm-c-title">{elem.content.title}</h3>
                 <button className="sm-c-next-button" onClick={() => handleSlide(25)} >

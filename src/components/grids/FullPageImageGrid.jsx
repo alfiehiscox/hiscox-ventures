@@ -19,7 +19,7 @@ const FullPageImageGrid = (props) => {
         {props.data.map((elem) => {
           if (elem.label !== currentImage) return undefined;
           return (
-            <div>
+            <div key={elem.label} >
               <h3>{elem.content.title}</h3>
               <p>{elem.content.description}</p>
             </div>

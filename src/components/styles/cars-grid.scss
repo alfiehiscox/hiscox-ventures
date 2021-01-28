@@ -110,3 +110,63 @@
 .cm-c-brand-history {
 	padding: 10px 40px;
 }
+
+@media (max-width: 900px) {
+	.cars-grid {
+		padding: 40px 10px;
+		width: calc(100% - 20px);
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.car-card > p {
+		margin-top: 0;
+	}
+
+	.car-modal-container {
+		width: 90%;
+		padding: 5% 5%;
+	}
+
+	.cm-c-content-container {
+		padding: 10px;
+	}
+
+	.cm-c-content-header {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.cm-c-car-history {
+		padding: 10px 10px;
+
+		.cm-c-car-history-content {
+			flex-direction: column-reverse;
+
+			> div {
+				width: 100%;
+				margin-right: 0; 
+				text-align: justify;
+				font-size: 14px;
+			}
+
+			h4 {
+				font-size: 18px;
+			}
+
+			> img {
+				border-radius: 5px;
+				width: 100%; 
+			}
+		}
+	}
+
+
+	.cm-c-brand-history {
+		padding: 0 10px;
+
+	}
+
+}
+

@@ -1,0 +1,59 @@
+.software-intro {
+	margin: 40px 0;
+	font-weight: lighter;
+}
+
+.scroller-container {
+	padding: 40px 0;
+	display: flex;
+	width: 100%;
+
+	button {
+		background-color: inherit;
+		display: block;
+	}
+
+	.scroller-sidebar {
+		width: 70%;
+
+		.sidebar-item:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.scroller-content {
+		height: 500px;
+		overflow: scroll;
+	}
+}
+
+.software-content-container {
+	height: 700px;
+	color: white;
+
+	.software-c-title {
+		margin: 0;
+		padding-top: 25px;
+		font-size: 30px;
+	}
+
+	.software-company-image {
+		width: 100px;
+		border-radius: 50px;
+	}
+
+	.software-company-container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 10px 0;
+	}
+
+	.software-company-description {
+		width: 100%;
+	}
+
+	.software-company-content {
+		width: 75%;
+	}
+}

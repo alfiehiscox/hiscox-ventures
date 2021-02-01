@@ -7,8 +7,9 @@ import { Link } from 'gatsby';
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
+    const window_width = typeof window !== `undefined` ? window.innerWidth : null
     this.state = {
-      viewportWidth: window.innerWidth,
+      viewportWidth: window_width,
       open: false,
       sectorOpen: false,
     }

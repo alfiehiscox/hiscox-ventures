@@ -235,9 +235,8 @@
 // People Card Default 
 .default {
 	.people-card-content {
-		$padding: 75px;
-		width: calc(100% - 2*$padding);
-		padding: $padding; 
+		width: calc(100% - 150px);
+		padding: 75px; 
 
 		h4 {
 			font-size: 20px;
@@ -271,9 +270,8 @@
 
 // People Card Details
 .people-tabs {
-	$padding: 90px 0px;
-	width: calc(100% - 2*$padding);
-	padding: $padding; 
+	width: calc(100% - 180px);
+	padding: 90px 0px;
 }
 
 .people-tab-list {

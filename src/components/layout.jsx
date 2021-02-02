@@ -3,12 +3,41 @@ import Nav from './nav';
 import "@fontsource/source-serif-pro";
 
 function Layout(props) {
+  let inProgress = true;
+  const styles = {
+    siteContainer: {
+      display: 'none',
+    },
+    inProgressBanner: {
+      height: "200px",
+      width: '40%',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      margin: '200px auto',
+      color: "white",
+      borderRadius: '20px',
+      display: 'flex',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      fontFamily: 'Quicksand',
+    }
+  } 
+
+  const inProgressStyle = inProgress ? styles.siteContainer : {};
+  const inProgressBannerStyle = inProgress ? styles.inProgressBanner : {display: 'none'};
   
   return (
     <div>
-      <Nav dark={props.dark}/>
-      {props.children}
-      <Footer dark={props.dark}/>
+      <div style={inProgressBannerStyle}>
+        <div>
+          <h1 style={{textAlign: 'center'}}>Hiscox Ventures Ltd</h1>
+          <h2>This site is currently under construction</h2>
+        </div>
+      </div>
+      <div style={inProgressStyle}> 
+        <Nav dark={props.dark}/>
+        {props.children}
+        <Footer dark={props.dark}/>
+      </div>
     </div>
   )
 }

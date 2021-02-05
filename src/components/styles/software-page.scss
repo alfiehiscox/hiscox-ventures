@@ -7,6 +7,7 @@
 	padding: 40px 0;
 	display: flex;
 	width: 100%;
+	position: relative;
 
 	button {
 		background-color: inherit;
@@ -14,7 +15,14 @@
 	}
 
 	.scroller-sidebar {
-		width: 70%;
+		width: 50%;
+		padding: 0 10px;
+		border-right: 1px solid rgb(150,150,150);
+
+		.sidebar-item {
+			text-align: left;
+			font-size: 1.2em;
+		}
 
 		.sidebar-item:hover {
 			text-decoration: underline;
@@ -23,6 +31,7 @@
 
 	.scroller-content {
 		height: 500px;
+		margin-left: 5%;
 		overflow: scroll;
 	}
 }
@@ -30,6 +39,7 @@
 .software-content-container {
 	height: 700px;
 	color: white;
+	width: calc(100% - 5%);
 
 	.software-c-title {
 		margin: 0;
@@ -56,4 +66,91 @@
 	.software-company-content {
 		width: 75%;
 	}
+
+	.software-company-image-container {
+		h4 {
+			display: none;
+		}
+	}
 }
+
+// Mobile Styles
+
+@media (max-width: 900px) {
+	.scroller-container {
+		display: block;
+
+		.scroller-sidebar {
+			display: none;
+		}
+	}
+
+	.mobile-sidebar-container {
+		.sidebar-item {
+			margin-left: 30px;
+		}
+	}
+
+	.software-content-container {
+		.software-company-container {
+			display: block;
+		}
+
+		.software-company-image-container {
+			display: flex;
+
+			h4 {
+				display: inline-block;
+				margin-left: 10px;
+			}
+		}
+
+		.software-company-image {
+			width: 60px;
+			height: auto;
+		}
+
+		.software-company-content{
+			h4 {
+				display: none;
+			}
+
+			margin-left: 40px;
+		}
+	}
+}
+
+.scroller-container {
+	.mobile-sidebar-button {
+		width: 100%;
+	}
+
+	.mobile-sidebar-container {
+		overflow: hidden;
+		height: 60px;
+	}
+	.mobile-sidebar-navigation-enter {
+		height: 60px;
+	};
+	.mobile-sidebar-navigation-enter-active {
+		transition: all 300ms ease-in-out;
+		height: 400px;
+	};
+	.mobile-sidebar-navigation-enter-done {
+		height: 400px;
+	}; 
+	.mobile-sidebar-navigation-exit {
+		height: 400px;
+	};
+	.mobile-sidebar-navigation-exit-active {
+		transition: all 300ms ease-in-out;
+		height: 60px;
+	};
+}
+
+
+
+
+
+
+

@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Layout} from '../components/layout';
 import {SoftwareScroller, SoftwareContent} from '../components/softwarePage';
 import SoftwareData from '../data/software-data';
 
 const SoftwarePage = () => {
+  const [viewport, setViewport] = useState(typeof window !== `undefined` ? window.innerWidth : null);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setViewport(window.innerWidth));
+  });
+
   return (  
     <Layout dark={true} >
       <div className="housing-page-container">
@@ -16,13 +22,14 @@ const SoftwarePage = () => {
           Aenean volutpat ipsum porta justo finibus vehicula.
         </p>
         <h4 className="software-intro" >Below are some of the software projects that we have been apart of: </h4>
-        <SoftwareScroller>
+        <SoftwareScroller viewport={viewport}>
           {SoftwareData.map((data) => {
             return (
               <SoftwareContent 
                 label={data.label}
                 introduction={data.intro}
                 companies={data.companies}
+                key={data.label}
               />
             );
           })}  

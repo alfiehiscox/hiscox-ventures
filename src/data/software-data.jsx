@@ -39,7 +39,7 @@ const softwareData = [
       },
       {
         image: BluJay,
-        name: "BluJay",
+        name: "Some Company",
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                       Sed at ligula non nunc laoreet dapibus eu vitae justo. 
                       Maecenas eu velit mauris. Vivamus rhoncus vulputate orci`

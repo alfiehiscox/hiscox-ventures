@@ -31,13 +31,13 @@ const PeopleCardDetail = (props) => {
         </div>
         <div label="Current Roles">
           <CurrentRoles 
-            introCurrentRoles="Martin currently has non-executive roles at the following companies:"
+            introCurrentRoles={`${props.name.split(' ')[0]}'s current postitions:`}
             companyInfo={props.companyInfo}
           />
         </div>
-        <div label="Work History">
+        <div label="History">
           <CurrentRoles 
-            introCurrentRoles="Martin’s previous roles:"
+            introCurrentRoles={`${props.name.split(' ')[0]}'s previous roles:`}
             companyInfo={props.historyInfo}
           />
         </div>

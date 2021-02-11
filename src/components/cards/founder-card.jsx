@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import '../styles/cards.scss';
-import FounderImage from '../../images/Dad-1.png';
+import FounderImage from '../../images/people-images/Dad-1.png';
 
 export default function FounderCard(props) {
   return (

@@ -12,7 +12,7 @@ import HV from '../images/thumbnail.png';
 import UOL from '../images/people-company-images/Alfie/uol.png';
 
 // Heather
-import Heather from '../images/people-images/heather_hiscox.jpg';
+import Heather from '../images/people-images/heather_hiscox.jpeg';
 import Xerox from '../images/people-company-images/Heather/xerox.svg';
 
 // Edward

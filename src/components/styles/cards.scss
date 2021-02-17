@@ -42,6 +42,35 @@
 	}
 }
 
+@media (max-width: 900px) {
+	.founder-card {
+		width: 80%;
+		height: auto;
+		flex-direction: column-reverse;
+		
+		.image-container {
+			height: 250px;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+
+		.founder-image {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			border-radius: 20px 20px 0px 0px;
+		}
+
+		.info-section {
+			margin: 20px;
+			padding: 0;
+			width: calc(100% - 40px);
+		}
+	}
+
+} 
+
 // Our History Text
 .our-history {
 	width: 750px;
@@ -59,6 +88,7 @@
 		font-size: 15px;	
 	}
 }
+
 
 
 // Partner Card (About Page)
@@ -106,6 +136,29 @@
 	}
 }
 
+@media (max-width: 900px) {
+	.partners-card-container {
+		width: 100%;
+		height: auto;
+		margin: 100px 0;
+
+		.partners-card-content {
+			width: calc(100% - 40px);
+			margin: 0 auto;
+			padding: 20px;
+		}
+	}
+
+	.companies {
+		width: 100%;
+		margin-top: 60px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+		align-items: center;
+	}
+}
+
 // General Cards (Right)
 .general-card {
 	width: 750px;
@@ -149,6 +202,41 @@
 		}
 	}
 
+}
+
+@media (max-width: 900px) {
+	.general-card {
+		width: 85%;
+		height: auto;
+		display: flex;
+		flex-direction: column-reverse;
+		border-radius: 20px;
+		margin: 30px auto;
+
+		.general-card-content {
+			padding: 20px;
+			width: 85%;
+			font-family: "Quicksand";
+
+			h3 {
+				font-weight: normal;
+				font-size: 20px;
+				margin: 10px 0;
+			}
+		
+		}
+
+		.general-card-image-cont {
+			height: 250px;
+			
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 20px 20px 0 0;
+			}
+		}
+	}
 }
 
 
@@ -439,6 +527,10 @@
 	button {
 		margin: 0;
 		padding: 0;
+	}
+
+	.our-history {
+		width: 80%;
 	}
 }
 

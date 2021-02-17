@@ -14,7 +14,7 @@ export default function FounderCard(props) {
            Pellentesque vel mauris eget dui pretium imperdiet. 
            Aliquam magna odio, fermentum a nulla vitae, blandit iaculis lorem. 
            Proin scelerisque ligula vitae neque hendrerit finibus.</p>
-        <Link className="link">Learn More About Martin</Link>
+        <Link to="/people" className="link">Learn More About Martin</Link>
       </div>
       <div className="image-container">
         <img className="founder-image" src={FounderImage} alt="Founder Martin Hiscox" />

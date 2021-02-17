@@ -8,7 +8,7 @@ const GeneralCard = (props) => {
       <div className="general-card-content">
         <h3>{props.title}</h3>
         <p>{props.content}</p>
-        <Link className="link">See More</Link>
+        <Link to={'/'+ props.link} className="link">See More</Link>
       </div>
       <div className="general-card-image-cont">
         <img src={props.image} alt={props.title} />

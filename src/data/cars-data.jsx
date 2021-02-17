@@ -32,7 +32,22 @@ import PorscheWhaleTale from '../images/car-images/PorscheWhaleTale.webp';
 import Porsche911 from '../images/car-images/Porsche911.png';
 import PorscheOldNew from '../images/car-images/PorscheOldNew.jpg';
 
-// Jaguar E Type V12
+// Jaguar MK II
+import JaguarMKII from '../images/car-images/JaguarMKII.jpg';
+import JaguarMKII1 from '../images/car-images/JaguarMKII1.jpg';
+import JaguarMKII2 from '../images/car-images/JaguarMKII2.jpg';
+import JaguarMKII3 from '../images/car-images/JaguarMKII3.jpg';
+import JaguarMKIIHistory from '../images/car-images/JaguarMKIIHistory.jpg';
+import JaguarMKIIJAG from '../images/car-images/JaguarMKIIJAG.jpg';
+import JAGMrWyatt from '../images/car-images/JAGMrWyatt.jpg';
+import JaguarEngine from '../images/car-images/JaguarEngine.jpg';
+import JaguarModern from '../images/car-images/JagModern.webp';
+
+// Bentley
+import Bentley from '../images/car-images/Bentley.jpg';
+import Bentley1 from '../images/car-images/Bentley1.jpg';
+import Bentley2 from '../images/car-images/Bentley2.jpg';
+import Bentley3 from '../images/car-images/Bentley3.jpg';
 
 
 const carsData = [
@@ -278,6 +293,142 @@ const carsData = [
                             and has continued to grow over the years, the desgin of the car as well as the internal
                             strategy has remained impressively stable from the original in 1963 to current day. 
                             Continuous improvement on a tried and tested system at its finest!`
+          }
+        }
+    ]
+  },
+  {
+    label: "Jaguar MKII",
+    gridImage: JaguarMKII,
+    date: "1970s",
+    images: [
+      { label: "JaguarMKII", image: JaguarMKII }, 
+      { label: "JaguarMKII1", image: JaguarMKII1 }, 
+      { label: "JaguarMKII2", image: JaguarMKII2 }, 
+      { label: "JaguarMKII3", image: JaguarMKII3 }
+    ],
+    carHistory: {
+      title: "Grace . . . Space . . . Pace",
+      image: JaguarMKIIHistory,
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat
+                  ipsum porta justo finibus vehicula.
+
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat 
+                  ipsum porta justo finibus vehicula!`
+    },
+    brandHistory: 
+      [
+        {
+          label: "The Jag!", 
+          image: JaguarMKIIJAG, 
+          content: {
+              title: "The Jag!",
+              description: `Back in the 60s, the mark 2, known more widely as
+                            simply 'The Jag', was the cool, sexy and fast kid on
+                            the block. Driven by racing drivers, bank robbers and 
+                            celebrities alike. It was a symbol of a golden classy age, 
+                            and it remains so today.`
+          }
+        },
+        {
+          label: "Mr Wyatt", 
+          image: JAGMrWyatt, 
+          content: {
+              title: "Back to the good ol' days",
+              description: `Way before Jaguar was bought by Ford and then subsequently by
+                           Tata Motors in 2008, they specialised in the sports saloon. The 
+                           car pictured was one from this era, an SS 2.5 Litre belonging to 
+                           a Mr Wyatt.`
+          }
+        },
+        {
+          label: "An engine to last", 
+          image: JaguarEngine, 
+          content: {
+              title: "An engine to last",
+              description: `A mainstay powerplant for Jaguar, the XK engine was conceived by
+                            Bill Lyons and designed by William 'Bill' Heynes and Walter 'Wally'
+                            Hassan. The result was a twin-cam straight six engine that was at
+                            the heart of many of Jaguar's classics, inlcuding the original Mk2. 
+                            Few engine types have demonstrated such ubiquity and longevity.`
+          }
+        },
+        {
+          label: "The Modern Jag", 
+          image: JaguarModern, 
+          content: {
+              title: "The Modern Jag!",
+              description: `Jaguar have come some way from their sports saloons and older XK engines. 
+                            Recently Jaguar has unveiled the F-TYPE Heritage 60 Edition, a design that 
+                            is meant to honour the sixty year heritage of the Jaguar E-type. The car will 
+                            have a 5.0 litre V8 575PS engine and a max speed of 186mph.`
+          }
+        }
+    ]
+  },
+  {
+    label: "Bentley",
+    gridImage: Bentley,
+    date: "1950s",
+    images: [
+      { label: "Bentley", image: Bentley }, 
+      { label: "Bentley1", image: Bentley1 }, 
+      { label: "Bentley2", image: Bentley2 }, 
+      { label: "Bentley3", image: Bentley3 }
+    ],
+    carHistory: {
+      title: "",
+      image: "",
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat
+                  ipsum porta justo finibus vehicula.
+
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat 
+                  ipsum porta justo finibus vehicula!`
+    },
+    brandHistory: 
+      [
+        {
+          label: "Turbo Charged!", 
+          image: "", 
+          content: {
+              title: "",
+              description: ``
+          }
+        },
+        {
+          label: "The Whale Tail", 
+          image: "", 
+          content: {
+              title: "",
+              description: ``
+          }
+        },
+        {
+          label: "The 911 Range", 
+          image: "", 
+          content: {
+              title: "",
+              description: ``
+          }
+        },
+        {
+          label: "Embodiment of Tradition", 
+          image: "", 
+          content: {
+              title: "",
+              description: ``
           }
         }
     ]

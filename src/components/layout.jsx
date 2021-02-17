@@ -3,7 +3,7 @@ import Nav from './nav';
 import "@fontsource/source-serif-pro";
 
 function Layout(props) {
-  let inProgress = false;
+  let inProgress = true;
   const styles = {
     siteContainer: {
       display: 'none',

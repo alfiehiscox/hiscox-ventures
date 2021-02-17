@@ -59,7 +59,7 @@ const carsData = [
                   Sed at ligula non nunc laoreet dapibus eu vitae justo. 
                   Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
                   interdum tincidunt tellus eleifend id. Aenean volutpat 
-                  ipsum porta justo finibus vehicula.`
+                  ipsum porta justo finibus this is a change.`
     }, 
     brandHistory: 
       [

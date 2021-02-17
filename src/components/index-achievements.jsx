@@ -17,11 +17,11 @@ const achData = [
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     link: "software"
   },
-  {
-    title: "Cinematography",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    link: "cinematography"
-  }
+  // {
+  //   title: "Cinematography",
+  //   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   link: "cinematography"
+  // }
 ];
 
 export default function IndexAchievements(props) {

@@ -59,16 +59,16 @@
 }
 
 .ach-card-container {
-	transform: translateX(-20px);
-	width: 800px;
+	width: 75%;
 	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 200px 200px 200px 200px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .ach-card {
 	height: 200px;
-	width: calc(100% - 1rem);
+	width: 200px;
 	background-color: white;
 	color: black;
 	border-radius: 20px;
@@ -80,14 +80,6 @@
 
 .ach-card:hover {
 	transform: translateY(-1rem);
-}
-
-.ach-card:hover~.ach-card {
-    transform: translateX(50px);
-}
-
-.arh-card:not(:first-child) {
-    margin-left: -130px;
 }
 
 .ach-card-title {
@@ -169,7 +161,7 @@
 	}
 
 	.ach-title {
-		padding: 70px 0;
+		padding: 40px 0;
 	}
 
 	.ach-card-container {
@@ -194,7 +186,7 @@
 	}
 
 	.ach-card:hover~.ach-card {
-	    transform: translateY(120px);
+	    transform: translateY(50px);
 	}
 
 	.arh-card:not(:first-child) {

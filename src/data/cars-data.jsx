@@ -21,6 +21,19 @@ import CorvetteBlack from '../images/car-images/corvette-black.jpg';
 import MakoShark from '../images/car-images/mako-shark.jpg';
 import C4 from '../images/car-images/corvette-c4.jpg';
 
+// Porsche
+import Porsche from '../images/car-images/Porsche1.jpg';
+import Porsche1 from '../images/car-images/Porsche2.jpg';
+import Porsche2 from '../images/car-images/Porsche3.jpg';
+import Porsche3 from '../images/car-images/Porsche4.jpg';
+import PorscheHistory from '../images/car-images/PorscheHistory.jpeg';
+import PorscheTurbo from '../images/car-images/PorscheTurbo.jpg';
+import PorscheWhaleTale from '../images/car-images/PorscheWhaleTale.webp';
+import Porsche911 from '../images/car-images/Porsche911.png';
+import PorscheOldNew from '../images/car-images/PorscheOldNew.jpg';
+
+// Jaguar E Type V12
+
 
 const carsData = [
   {
@@ -189,6 +202,82 @@ const carsData = [
                             seven hides of leather to upholster, with every single body panel being 
                             hand fettled. It's no wonder that the Interceptor became known as 'the car for the stars' 
                             eventually being described as 'supersonic velvet'!`
+          }
+        }
+    ]
+  },
+  {
+    label: "Porsche 930 Turbo",
+    gridImage: Porsche,
+    date: "1970s",
+    images: [
+      { label: "Porsche", image: Porsche }, 
+      { label: "Porsche1", image: Porsche1 }, 
+      { label: "Porsche2", image: Porsche2 }, 
+      { label: "Porsche3", image: Porsche3 }
+    ],
+    carHistory: {
+      title: "Absolute Power",
+      image: PorscheHistory,
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat
+                  ipsum porta justo finibus vehicula.
+
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed at ligula non nunc laoreet dapibus eu vitae justo. 
+                  Maecenas eu velit mauris. Vivamus rhoncus vulputate orci, 
+                  interdum tincidunt tellus eleifend id. Aenean volutpat 
+                  ipsum porta justo finibus vehicula!`
+    },
+    brandHistory: 
+      [
+        {
+          label: "Turbo Charged!", 
+          image: PorscheTurbo, 
+          content: {
+              title: "Turbo Charged!",
+              description: `Porsche began experimenting with turbocharging technology 
+                            on their race cars during the late 1960s, and in 1972 
+                            began development on a turbocharged version of the 911.
+                            Ernst Fuhrmann adapted the turbo-technology originally 
+                            developed for the race track and applied it to the 
+                            3.0 litre flat-six used in Carrera RS 3.0, thus creating 
+                            what Porsche internally dubbed as the 930.`
+          }
+        },
+        {
+          label: "The Whale Tail", 
+          image: PorscheWhaleTale, 
+          content: {
+              title: "The Whale Tail",
+              description: `Porsche badged the vehicle simply as "Turbo", however because
+                            of the 930 oversized rear spoiler it affectionately gained the
+                            nickname 'The Whale Tail'! The spoiler was installed to help vent 
+                            more air to the engine and to create more downforce at the rear of the vehicle.`
+          }
+        },
+        {
+          label: "The 911 Range", 
+          image: Porsche911, 
+          content: {
+              title: "The 911 Range",
+              description: `The first iteration of the 911, then named the 901, took Porsche's pedigree from the race
+                            track and brought it to the production line. Rumour has it that Porsche renamed the
+                            car the 911 because France car makers claimed to have copyrighted any car name with 
+                            3 digits and a 0 in the middle. Hence, the 911 was born.`
+          }
+        },
+        {
+          label: "Embodiment of Tradition", 
+          image: PorscheOldNew, 
+          content: {
+              title: "Embodiment of Tradition",
+              description: `Although obviously the 911 range has seen adapted with the technologies of the time
+                            and has continued to grow over the years, the desgin of the car as well as the internal
+                            strategy has remained impressively stable from the original in 1963 to current day. 
+                            Continuous improvement on a tried and tested system at its finest!`
           }
         }
     ]

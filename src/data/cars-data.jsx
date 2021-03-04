@@ -33,10 +33,10 @@ import Porsche911 from '../images/car-images/Porsche911.png';
 import PorscheOldNew from '../images/car-images/PorscheOldNew.jpg';
 
 // Jaguar MK II
-import JaguarMKII from '../images/car-images/JaguarMKII.jpg';
-import JaguarMKII1 from '../images/car-images/JaguarMKII1.jpg';
-import JaguarMKII2 from '../images/car-images/JaguarMKII2.jpg';
-import JaguarMKII3 from '../images/car-images/JaguarMKII3.jpg';
+import JaguarMKII from '../images/car-images/JaguarMkII.jpg';
+import JaguarMKII1 from '../images/car-images/JaguarMkII1.jpg';
+import JaguarMKII2 from '../images/car-images/JaguarMkII2.jpg';
+import JaguarMKII3 from '../images/car-images/JaguarMkII3.jpg';
 import JaguarMKIIHistory from '../images/car-images/JaguarMKIIHistory.jpg';
 import JaguarMKIIJAG from '../images/car-images/JaguarMKIIJAG.jpg';
 import JAGMrWyatt from '../images/car-images/JAGMrWyatt.jpg';
